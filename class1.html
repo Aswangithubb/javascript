@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1 id="head">welcome to dom</h1>
+    <ul>
+        <li>document.getElementsById('id-name')</li>
+        <li class="cls">document.getElementsByClassName('class-name')</li>
+        <li>document.getElementsByTagName('tag-name')</li>
+        <li></li>
+        <li></li>
+    </ul>
+    <p class="cls">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, alias fugit minima harum vel, quam perspiciatis a, perferendis minus id aperiam repellendus ab esse unde. Beatae earum laudantium amet delectus!</p>
+    <!-- <script>
+arr=[1,2,3,4,5,""]
+console.log(arr);
+
+    </script> -->
+<script>
+    let doc1=document.getElementById("head");
+    console.log(doc1);
+    doc1.style.color="red"
+
+    let doc2=document.getElementsByClassName("cls")
+    console.log(doc2);//html collection
+    console.log(Array.from(doc2));//array
+    Array.from(doc2).map(item=>item.style.color="blue")
+
+    //using tag name
+    let doc3=document.getElementsByTagName('li')
+    console.log(doc3);//html colllection
+    console.log([...doc3].map(item=>item.style.color='green'));//array
+
+    //query selector
+    let doc4=document.querySelector('.cls');
+    console.log(doc4);
+    let doc5=document.querySelectorAll('.cls');
+    console.log(doc5);
+    
+    
+    
+
+    
+    
+    
+</script>
+
+</body>
+</html>

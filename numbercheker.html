@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Check</title>
+    <style>
+        h1{
+            color: blue;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            align-items: center;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+            align-items: center;
+        }
+        button:hover {
+            background-color: #e4e4e7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class=" " >Check Number</h1>
+        <input  id="numberInput" placeholder="Enter a number"><br>
+        <button onclick="checkNumber()">Check</button>
+        <div class="result" id="resultBox"></div>
+    </div>
+
+    <script>
+        function checkNumber() {
+            const number = parseFloat(document.getElementById('numberInput').value);
+            const resultBox = document.getElementById('resultBox');
+            let message;
+
+            if (isNaN(number)) {
+                message = "Please enter a valid number.";
+            } else if (number > 0) {
+                message = "The number is Positive.";
+            } else if (number < 0) {
+                message = "The number is Negative.";
+            } else {
+                message = "The number is Zero.";
+            }
+
+            resultBox.textContent = message;
+        }
+    </script>
+</body>
+</html>

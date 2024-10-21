@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Age Classification</title>
+    <script>
+        function checkVotingEligibility() {
+            // Get the user's age from the input field
+            const age = parseInt(document.getElementById("ageInput").value);
+            
+            // Validate the input
+            if (isNaN(age) || age < 0) {
+                alert("Please enter a valid age.");
+                return;
+            }
+            
+            // Determine voting eligibility
+            let message;
+            if (age >= 18) {
+                message = "You are eligible to vote.";
+            } else {
+                message = "You are not eligible to vote.";
+            }
+            
+            // Display the result
+            document.getElementById("result").innerText = message;
+        }
+    </script>
+</head>
+<body>
+    <h1>Voting Age Classification</h1>
+    <label for="ageInput">Enter your age:</label>
+    <input type="number" id="ageInput" min="0">
+    <button onclick="checkVotingEligibility()">Check Eligibility</button>
+    
+    <p id="result"></p>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./cal.js">
+    <style>
+        .calculator {
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        #result {
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .btn {
+            height: 60px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <div id="calc">
+        <input id="result" type="text" class="form">
+    </div>
+    <div class="row">
+        <div class="col-3"><button class="btn btn-light" onclick="displayNumber(7)">7</button></div>
+        <div class="col-3"><button class="btn btn-light" onclick="displayNumber(8)">8</button></div>
+        <div class="col-3"><button class="btn btn-light" onclick="displayNumber(9)">9</button></div>
+        <div class="col-3"><button class="btn btn-warning" onclick="displayNumber('*')">*</button></div>
+    </div>
+    <div class="row">
+        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('4')">4</button></div>
+        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('5')">5</button></div>
+        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('6')">6</button></div>
+        <div class="col-3"><button class="btn btn-" onclick="setOperation('*')">/</button></div>
+    </div>
+    <div class="row">
+        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('1')">1</button></div>
+        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('2')">2</button></div>
+        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('3')">3</button></div>
+        <div class="col-3"><button class="btn btn-primary" onclick="setOperation('-')">-</button></div>
+    </div>
+    <div class="row">
+        <div class="col-3"><button class="btn btn-light" onclick="clearScreen()">C</button></div>
+        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('0')">0</button></div>
+        <div class="col-3"><button class="btn btn-success" onclick="operation()">=</button></div>
+        <div class="col-3"><button class="btn btn-primary" onclick="setOperation('+')">+</button></div>
+    </div>
+</div>
+
+<script>
+   function displayNumber(num) {
+    result.value+=num
+}
+
+function clearScreen(){
+result.value=" "
+}
+function operation(){
+    result.value=eval(result.value)
+}
+</script>
+
+</body>
+</html>

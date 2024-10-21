@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <p id="child">This is child element</p>
+    </div>
+<!-- /2-childnNodes-return the nodelist of the element -->
+ <ul id="listitems">
+    <li>child1</li>
+    <li>child2</li>
+    <li>child3</li>
+    <li>child4</li>
+ </ul>
+<!-- 3-innerHTML-gets or sets the html content of an element -->
+ <div id="element">
+    <p>this is for inner html</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quaerat quisquam earum perspiciatis ratione nisi deserunt voluptate officia ad architecto, possimus quod neque quis doloremque, est cumque, impedit tempore eaque?</p>
+ </div>
+
+ <!-- //4-text content  -->
+  <p id="new">this is new paragraph</p>
+    <script>
+       childnode=document.getElementById('child')
+        console.log(childnode);
+        parent=childnode.parentNode
+        console.log(parent);
+  //2-childnNodes-return the nodelist of the element
+        parentelement=document.getElementById('listitems')
+        console.log(parentelement);
+        console.log(parentelement.childNodes);
+        
+    //3-innerHTML-gets or sets the html content of an element 
+    doc1=document.getElementById('element')
+    console.log(doc1);
+    doc1.innerHTML=`<h1>hlo</h1>`
+    //4-text content 
+text=document.getElementById("new")
+console.log(text);
+text.textContent="welcome"
+  
+
+        
+        
+        
+    </script>
+</body>
+</html>

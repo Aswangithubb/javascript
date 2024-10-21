@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- button -->
+
+    <button onclick="btnclick()">click me</button>
+    <script>
+        function btnclick() {
+            alert('Welcome to DOM')
+        }
+    </script>
+<!-- 
+     <div class="test"> -->
+        <!-- a div with class="test"
+        another div with class test -->
+    <!-- </div>
+    <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim quos id delectus tenetur et, aperiam excepturi repellendus aspernatur libero esse dolor natus! Saepe fugiat dolorem, est excepturi eius asperiores!</p>
+    <button class="test" onclick="mytest()">try it</button> --> 
+    <p id="hi">this is first paragraph</p>
+<p>this is second paragraph</p>
+<P>This is third paragraph</P>
+<button onclick="GetID('green')">green</button>
+<button onclick="GetID('red')">red</button>
+<button onclick="GetID('blue')">blue</button>
+<script>
+    function GetID(newColor) {
+        document.getElementById('hi').style.color=newColor;
+        
+    }
+    
+    // //using for loop
+    // function mytest() {
+    //     var x=document.getElementsByClassName("test");
+    //     var i;
+    //     for(i=0;i<x.length;i++){
+    //         x[i].style.backgroundColor="red"
+    //     }
+    // }
+// function mytest(){
+//     doc=document.getElementsByClassName("test");
+//     console.log([...doc].map(item=>{
+//  item.style.backgroundcolor='red',
+//         item.style.backgroundcolor="blue"
+//     }
+       
+    
+
+//     ));
+    
+// }
+
+    
+</script>
+</body>
+</html>

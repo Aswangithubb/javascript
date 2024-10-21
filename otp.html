@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Login Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .login-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color:orange;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: grey;
+        }
+    </style>
+   <script src="./login.js"></script>
+</head>
+<body>
+    <div class="login-box btn-light" id="otp">
+        <h2>Login</h2>
+        <input type="text" id="uname" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button onclick="login()" class="bg-primary">Generate otp</button>    </div>
+    <script>
+        function login(){
+            const otpLength = 6;
+            let otp = '';
+            for (let i = 0; i < otpLength; i++) {
+                otp += Math.floor(Math.random() * 10); // Generate a digit (0-9)
+            }
+           alert(document.getElementById('otp').innerText = `Your OTP is: ${otp}`) ;
+           
+        }
+    </script>
+</body>
+</html>
